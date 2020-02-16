@@ -61,14 +61,15 @@ function isPalindrome(number) {
   return true;
 }
 
-console.log(isInteresting(3, [1337, 256]));
-console.log(isInteresting(1336, [1337, 256]));
-console.log(isInteresting(1337, [1337, 256]));
-console.log(isInteresting(11208, [1337, 256]));
-console.log(isInteresting(11209, [1337, 256]));
-console.log(isInteresting(11211, [1337, 256]));
-console.log(isInteresting(10000, [1337, 256]));
-console.log(isInteresting(88888, [1337, 256]));
-console.log(isInteresting(67890, [1337, 256]));
-console.log(isInteresting(122, [1337, 256]));
-console.log(isInteresting(67890, [1337, 256]));
+// TESTS
+console.log(isInteresting(3, [1337, 256]) === 0);
+console.log(isInteresting(1336, [1337, 256]) === 1);
+console.log(isInteresting(1337, [1337, 256]) === 2);
+console.log(isInteresting(11208, [1337, 256]) === 0);
+console.log(isInteresting(11209, [1337, 256]) === 1);
+console.log(isInteresting(11211, [1337, 256]) === 2);
+console.log(isInteresting(10000, [1337, 256]) === 2);
+console.log(isInteresting(88888, [1337, 256]) === 2);
+console.log(isInteresting(67890, [1337, 256]) === 2);
+console.log(isInteresting(122, [1337, 256]) === 1);
+console.log(isInteresting(67890, [1337, 256]) === 2);
