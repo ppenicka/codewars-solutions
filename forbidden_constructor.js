@@ -1,9 +1,9 @@
 // https://www.codewars.com/kata/551e467e24b7a4e0b20001e8
 
-var Point = (function () {
-  var inside = false;
+let Point = (function () {
+  let inside = false;
 
-  var Point = function (x, y) {
+  let Point = function (x, y) {
       if (!inside) {
          throw new Error('Constructor cannot be called directly. Use Point.create(x, y) instead.');
       }
