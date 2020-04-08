@@ -1,19 +1,14 @@
 // https://www.codewars.com/kata/51e056fe544cf36c410000fb
 
 function topThreeWords (text) {
-  let res = [];
-  let map = {};
-
   let split = text.match(/\b[\w']+\b/g);
 
+  let map = {};
   if (split) {
     for (let word of split) {
       const key = word.toLowerCase();
-      if (map.hasOwnProperty(key)) {
-        map[key] = map[key] + 1;
-      } else {
-        map[key] = 1;
-      }
+      if (map.hasOwnProperty(key)) map[key]++;
+      else map[key] = 1;
     }
   }
 
@@ -22,19 +17,7 @@ function topThreeWords (text) {
     sortable.push([word, map[word]]);
   }
 
-  sortable.sort((a, b) => {
-    if (a[1] < b[1]) return 1
-    if (a[1] > b[1]) return -1
-    if (a[1] === b[1]) return 0
-  })
-
-  for (let i = 0; i < 3; i++) {
-    if (sortable[i]) {
-      res.push(sortable[i][0]);
-    }
-  }
-
-  return res;
+  return sortable.sort((a, b) => b[1] - a[1]).map(word => word[0]).slice(0, 3);
 }
 
 
