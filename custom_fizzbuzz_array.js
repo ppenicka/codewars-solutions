@@ -1,4 +1,4 @@
-https://www.codewars.com/kata/5355a811a93a501adf000ab7
+// https://www.codewars.com/kata/5355a811a93a501adf000ab7
 
 var fizzBuzzCustom = function(stringOne = 'Fizz', stringTwo = 'Buzz', numOne = 3, numTwo = 5) {
   let result = [];
@@ -17,6 +17,6 @@ var fizzBuzzCustom = function(stringOne = 'Fizz', stringTwo = 'Buzz', numOne = 3
 };
 
 // TESTS
-
+console.log(fizzBuzzCustom());
 console.log(fizzBuzzCustom('Fizz','Buzz'));
 console.log(fizzBuzzCustom('hello','world', 4, 5));
